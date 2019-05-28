@@ -1,0 +1,16 @@
+#!/bin/bash
+FILE="/etc/hosts"
+
+if grep -q "127.0.0.1 youtube.com" $FILE; then
+    sed -i '' '/127.0.0.1 youtube.com/d' $FILE
+    sed -i '' '/127.0.0.1 www.youtube.com/d' $FILE
+    echo "Unproductive"
+else
+
+    sed -i "" -e $'/127.0.0.1	localhost/a\\\n'"127.0.0.1 youtube.com" $FILE
+    sed -i "" -e $'/127.0.0.1 youtube.com/a\\\n'"127.0.0.1 www.youtube.com" $FILE
+    echo "Productive"
+fi
+
+lineNum="$(grep -n "127.0.0.1	localhost" $FILE | head -n 1 | cut -d: -f1)"
+
