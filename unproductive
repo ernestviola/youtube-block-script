@@ -1,0 +1,6 @@
+#!/bin/bash
+FILE="/etc/hosts"
+    sed -i '' '/127.0.0.1 youtube.com/d' $FILE
+    sed -i '' '/127.0.0.1 www.youtube.com/d' $FILE
+    echo "Unproductive"
+
