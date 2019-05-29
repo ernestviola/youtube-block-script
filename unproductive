@@ -1,6 +1,7 @@
 #!/bin/bash
 FILE="/etc/hosts"
+if grep -q "127.0.0.1 youtube.com" $FILE; then
     sed -i '' '/127.0.0.1 youtube.com/d' $FILE
     sed -i '' '/127.0.0.1 www.youtube.com/d' $FILE
     echo "Unproductive"
-
+fi

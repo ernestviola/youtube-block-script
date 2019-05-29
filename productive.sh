@@ -11,6 +11,3 @@ else
     sed -i "" -e $'/127.0.0.1 youtube.com/a\\\n'"127.0.0.1 www.youtube.com" $FILE
     echo "Productive"
 fi
-
-lineNum="$(grep -n "127.0.0.1	localhost" $FILE | head -n 1 | cut -d: -f1)"
-
