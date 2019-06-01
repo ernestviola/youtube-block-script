@@ -9,6 +9,13 @@ mv productive /usr/local/bin
 ## In Terminal
 use sudo crontab -e
 
+## Launchd
+sudo cp com.ernestscripts.productive.plist /Library/LaunchDaemons/com.ernestscripts.productive.plist
+launchctl load /Library/LaunchDaemons/com.ernestscripts.productive.plist
+
+### To Unload
+launchctl unload ~/Library/LaunchAgents/com.ernestscripts.productive.plist
+
 ## Crontab example
 0 16 * * * unproductive
 
