@@ -1,8 +1,11 @@
 #!/bin/bash
 FILE="/etc/hosts"
 hour=$(date +%H)
+hour=`echo $hour|sed 's/^0*//'`
 
-if (( $hour >= 18 || $hour < 2 )); then
+# echo $hour
+
+if (( $hour >= 18 || $hour < 1 )); then
 #unproductive
     if grep -q "127.0.0.1 youtube.com" $FILE; then
         sed -i '' '/127.0.0.1 youtube.com/d' $FILE
