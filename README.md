@@ -1,5 +1,5 @@
 # Script to be more productive
-Is used with crontab in order to schedule a productive period by blocking YouTube.
+Is used with crontab and launchd in order to schedule a productive period by blocking YouTube.
 
 ## Make Productive usable
 cp productive.sh productive
