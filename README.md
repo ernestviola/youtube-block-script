@@ -17,6 +17,6 @@ launchctl load /Library/LaunchDaemons/com.ernestscripts.productive.plist
 launchctl unload ~/Library/LaunchAgents/com.ernestscripts.productive.plist
 
 ## Crontab example
-0 16 * * * unproductive
+0 16 * * * productive
 
 0 18 * * * productive
