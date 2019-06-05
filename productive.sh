@@ -5,7 +5,7 @@ hour=`echo $hour|sed 's/^0*//'`
 
 # echo $hour
 
-if (( $hour >= 18 || $hour < 1 )); then
+if (( hour >= 18 && hour < 23 )); then
 #unproductive
     if grep -q "127.0.0.1 youtube.com" $FILE; then
         sed -i '' '/127.0.0.1 youtube.com/d' $FILE
