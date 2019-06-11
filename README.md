@@ -11,12 +11,13 @@ use sudo crontab -e
 
 ## Launchd
 sudo cp com.ernestscripts.productive.plist /Library/LaunchDaemons/com.ernestscripts.productive.plist
-launchctl load /Library/LaunchDaemons/com.ernestscripts.productive.plist
+sudo launchctl load /Library/LaunchDaemons/com.ernestscripts.productive.plist
+### To start without login
+launchctl start com.ernestscripts.productive.plist
 
 ### To Unload
 launchctl unload ~/Library/LaunchAgents/com.ernestscripts.productive.plist
 
 ## Crontab example
 0 16 * * * productive
-
 0 18 * * * productive
