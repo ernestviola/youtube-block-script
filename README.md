@@ -19,5 +19,7 @@ launchctl start com.ernestscripts.productive.plist
 launchctl unload ~/Library/LaunchAgents/com.ernestscripts.productive.plist
 
 ## Crontab example
+```
 1 18 * * * /usr/local/bin/productive >/tmp/stdout.log 2>/tmp/stderr.log
 1 22 * * * /usr/local/bin/productive >/tmp/stdout.log 2>/tmp/stderr.log
+```
